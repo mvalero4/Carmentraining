@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="Imagenes/contraste-06.ico">
+		<script src="index.js"></script>
+		<title> @Carmentraining</title>
+	</head>
+
+	<body>
+		<header>
+			<nav class="nav">
+				<section class="nav-left">
+					<picture class="logo-nombre-eslogan">
+						<img class= "logo" src="Imagenes/contraste-06.jpg" alt="logo de carmentraining">
+						<figcaption class="nombre-eslogan">
+							<p>Carmen Valero</p>
+							<p>Si no te esfuerzas al máximo, ¿cómo sabrás dónde está tu límite?</p>
+						</figcaption>
+					</picture>
+				</section>
+
+				<ul class="nav-menu">
+					<li class="nav-menu-item item1"><a class="nav-menu-link" href="./index.html"><img src="./Imagenes/Inicio.png" alt="Inicio"><span>Inicio</span> </a></li>
+					<li class="nav-menu-item-redes"><a class="nav-menu-link-redes" href="#footer"><img src="./Imagenes/redes-sociales.png" alt="Redes Sociales"><span>Redes sociales</span></a></li>
+					<li class="nav-menu-item item3"><a class="nav-menu-link" href="#toma-medidas"><img src="./Imagenes/calculadora.png" alt="Calculadoras"><span>Calculadoras</span></a></li>
+					<li class="nav-menu-item item4"><a class="nav-menu-link" href="https://api.whatsapp.com/send?phone=573165064005" target="_blank"><img src="./Imagenes/contactame.png" alt="Contáctame"><span>Contáctame</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+
+			<section id="toma-medidas">
+				<div class="container-all">
+					<h6>CALCULADORA DE ÍNDICE DE MASA CORPORAL (IMC)</h6>
+					<p>¿Cómo se mide el IMC?
+						La fórmula del IMC es el peso en kilógramos dividido por el cuadrado de la altura en metros (kg/m2). El IMC es una indicación simple de la relación entre el peso y la talla que se utiliza frecuentemente para identificar el sobrepeso y la obesidad en los adultos, tanto a nivel individual como poblacional</p>
+						<p>El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional.
+	
+						El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, pues la forma de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, debe considerarse como una guía aproximativa, pues puede no corresponder al mismo grado de gordura en diferentes individuos.
+						
+						La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional dependiendo del IMC de una persona.</p>
+				
+					<div class="tabla">
+						<label class="tabla-medidas-celdas" for="Peso">
+							Escribe tu peso en kg
+							<input id="Peso" type="number" required/>
+						</label>
+						
+						<label class="tabla-medidas-celdas"  for="Estatura">
+							Escribe tu estatura en cm
+							<input id="Estatura" type="number"required/>
+						</label>
+						
+						<button class="calcula-medidas" type="button" onclick="imc();">Calcular</button>
+					</div>
+					<section class="parrafos">
+						<p id="Resultado"></p>
+						<p id="Explicacion"></p>
+					</section>
+				</div>
+				
+			</section>
+
+
+			<section id="metabolismo-basal">
+				<div class="metabolismo-container-all">
+					<h6>CALCULA TU METABOLISMO BASAL</h6>
+					<p>El índice metabólico basal o la tasa metabólica basal (TMB) indica la cantidad de calorías que necesita el cuerpo para realizar las funciones metabólicas básicas, como mantener los órganos vitales en funcionamiento. La TMB se calcula en estado inactivo y en ayunas. Para más precisión, la TMB debe calcularse después de un periodo de ayunas de 12 horas. 
+					Usa la herramienta para calcular tu TMB y descubre cómo usar el cálculo del metabolismo basal para la pérdida de peso.</p>
+					
+					<div class="metabolismo-tabla">
+						<label class="tabla-metabolismo-celdas"  for="Sexo">
+							Dime tu sexo <br>(1 es Masculino y 2 es Femenino)
+							<input id="Sexo" type="number"required/>
+						</label>
+						<label class="tabla-metabolismo-celdas"  for="Edad">
+							Dime tu edad
+							<input id="Edad" type="number"required/>
+						</label>
+						<label class="tabla-metabolismo-celdas" for="Peso1">
+							Escribe tu peso en kg
+							<input id="Peso1" type="number" required/>
+						</label>
+						
+						<label class="tabla-metabolismo-celdas"  for="Estatura1">
+							Escribe tu estatura en cm
+							<input id="Estatura1" type="number"required/>
+						</label>
+						
+						<button class="calcula-metabolismo" type="button" onclick="tmb();">Calcular</button>	
+					</div>
+
+					<section class="parrafos1">
+						<p id="Resultado1"></p>
+						<p id="Explicacion1"></p>
+					</section>
+					
+				</div>
+				
+			</section>
+
+		</main>
+
+		<footer id="footer">
+			<section class="left">
+					<p>Carmen Valero</p>
+					<p>3165064005</p>
+			</section>
+
+			<section class="right">
+					<a href="https://www.instagram.com/carmentraining/" target="_blank"><img src="./Imagenes/Instagram_icon.png.png" alt="logo-instagram"></a>
+					<a href="https://www.facebook.com/mvalero4" target="_blank"><img src="./Imagenes/logo-facebook.png" alt="logo-facebook"></a>
+					<a href="https://github.com/mvalero4" target="_blank"><img src="./Imagenes/logo-github.png" alt="logo-github"></a>
+			</section>
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,1535 @@
+:root{
+  --text-color: #DCEDC8;
+  --text-color2: #212121;
+  --background-color: #0d0d0d;
+  --events-color: #151615;
+  --button-color: #88D709;
+  --button-color2: #04C80B;
+  --font-weight-p: normal normal normal 20px/3.6rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p2: normal normal normal 16px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p3: normal normal normal 22px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p4: normal normal normal 26px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones: normal normal normal 24px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones-inicio: normal normal normal 18px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones-inicio-reducidos: normal normal normal 12px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+
+/* Barra de navegación */
+
+header{
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background-color: var(--events-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+}
+
+.nav{
+  width: 95%;
+  margin: 0 auto;
+  background-color: var(--events-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left{
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.logo-nombre-eslogan{
+  display: flex;
+  margin: 10px;
+  height: auto;
+}
+
+.logo{
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.nombre-eslogan{
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  min-width: 200px;
+}
+
+
+
+
+
+
+
+/* botones */
+
+.nav-menu{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  height: auto;
+}
+
+.nav-menu-item {
+  display: inline-block;
+  border: 2px solid #00e600;
+  background-color: transparent;
+  font: var(--font-botones-inicio);
+  border: 2px solid var(--button-color2);  
+  text-align: center;
+  width: max-content;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--button-color);
+  transition: .3s;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu-item::before{
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--text-color);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.nav-menu-item:hover::before {
+  width: 105%;
+}
+
+.nav-menu-item:hover {
+  color: #111;
+  transform: translateY(50%);
+}
+
+.nav-menu-item-redes {
+  display: inline-block;
+  background-color: transparent;
+  font: var(--font-botones-inicio);
+  border: 2px solid var(--button-color2);  
+  text-align: center;
+  width: max-content;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--button-color);
+  transition: .3s;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu-item-redes::before{
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--text-color);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.nav-menu-item-redes:hover::before {
+  width: 105%;
+}
+
+.nav-menu-item-redes:hover {
+  color: #111;
+  transform: translateY(50%);
+}
+
+.nav-menu-link{
+  display: block;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-menu-link:hover{
+  color: #000000;
+}
+
+.nav-menu-link img{
+  display: none;
+}
+
+.nav-menu-link-redes{
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-menu-link-redes:hover {
+  color: var(--text-color2);
+}
+
+.nav-menu-link-redes img{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* Cuerpo de la página */
+
+main{
+  padding-top: 120px;
+  width: 100%;
+  background: var(--events-color);
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+main .carmentraining{
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+  line-height: 1rem;
+  vertical-align: baseline;
+  letter-spacing: normal;
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: normal normal normal 88px/8.2rem oswald-medium,oswald,sans-serif;
+  color: var(--button-color);
+  font-weight: bold;
+}
+
+h1:hover{
+  transform: scale(1.5);
+}
+
+h2,
+h3{
+  line-height: 1.4rem;
+  font: normal normal normal 30px/3.41rem oswald-medium,oswald,sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.carmentraining p{
+  font: var(--font-weight-p);
+  line-height: 1.75rem;
+  line-height: 30px;
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+/* Reel de Instagram */
+
+main .instagram{
+  padding: 20px;
+  margin: 15px auto;
+  justify-items: center;
+  align-items: center;
+  height: auto;
+  opacity: 0.40;
+}
+
+.instagram{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, 285px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.instagram-item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+/* Bloque de quién soy */
+
+.quien-soy{
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px;
+  font-weight: bold;
+  background-color: var(--button-color);
+}
+
+.quien-soy picture{
+  display: flex;
+}
+
+.quien-soy figcaption{
+  text-align: center;
+  float: right;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.quien-soy img{
+  float: left;
+  width: 500px;
+  object-fit: cover;
+}
+
+.quien-soy p:nth-child(1){
+  font: normal normal normal 40px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--events-color);
+  margin-bottom: 10px;
+}
+
+.quien-soy p:nth-child(2){
+  font: var(--font-weight-p);
+  color: var(--text-color);
+  line-height: 3.3rem;
+}
+
+.contactame{
+  display: flex;
+  margin: 20px auto;
+  text-align: center;
+  justify-content: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  background-color: var(--button-color2);
+  color: var(--text-color);
+  font: var(--font-weight-p);
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid var(--events-color);
+  box-shadow: 0px 4px 8px var(--events-color);
+}
+
+.contactame:hover {
+  background-color: var(--text-color);
+  color: var(--text-color2);
+  transform: scale(1.5);
+}
+
+
+
+
+/* Bloque de que hago */
+
+.que-hago{
+  width: 100%;
+  margin: 30px auto;
+  font-weight: bold;
+  background-color: var(--events-color);
+}
+
+.que-hago img{
+  display: flex;
+  float: right;
+  margin-right: 50px;
+  height: 1060px;
+  object-fit: cover;
+}
+
+.descripcion-titulo p:nth-child(1){
+  font: normal normal normal 40px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--button-color);
+  margin-bottom: 0;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.descripcion-titulo p:nth-child(2){
+  font: var(--font-weight-p);
+  color: var(--text-color);
+  margin-bottom: 30px;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.descripcion p:nth-child(1){
+  font: normal normal normal 30px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--button-color);
+  margin-bottom: 0;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.descripcion p:nth-child(2){
+  font: var(--font-weight-p);
+  color: var(--text-color);
+  margin-bottom: 30px;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.descripcion p:nth-child(3){
+  font: var(--font-weight-p);
+  color: var(--text-color);
+  margin-bottom: 30px;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* Bloque de preguntas frecuentes */
+
+.preguntas_frecuentes{
+  text-align: center;
+  width: 100%;
+}
+
+.preguntas{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.preguntas_frecuentes img{
+  margin-top: 40px;
+  width: 100%;
+  height: 400px;
+}
+
+.preguntas figcaption {
+ margin-top: -15%;
+ margin-bottom: 120px;
+}
+
+.preguntas figcaption p:nth-child(1){
+  font: normal normal normal 45px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.preguntas p:nth-child(2){
+  font: normal normal normal 30px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.respuestas{
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  background-color: var(--events-color);
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.respuesta p:nth-child(1){
+  font: var(--font-weight-p4);
+  font-weight: bold;
+  color: var(--button-color);
+  margin-bottom: 0;
+  line-height: 2.9rem;
+}
+
+.respuesta p:nth-child(2){
+  font: var(--font-weight-p3);
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 8px;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+/* Bloque de medidas */
+
+#toma-medidas{
+  width: 100%;
+  display: flex;
+  background-color: var(--events-color);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.container-all{
+  font: var(--font-weight-p);
+  line-height: normal;
+  margin: 0 auto;
+  padding: 20px;
+  width: 95%;
+  height: 600px;
+  background: var(--button-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-all h6{
+  font: var(--font-weight-p);
+  line-height: normal;
+  margin: 0 auto;
+  padding: 20px;
+  width: 95%;
+  height: auto;
+  background: var(--button-color2);
+  color: var(--events-color);
+  box-shadow: 0px 4px 8px var(--events-color);
+  font-weight: bold;
+}
+
+.container-all p{
+  font: var(--font-weight-p);
+  line-height: normal;
+  margin: 0 auto;
+  padding: 20px;
+  width: 95%;
+  height: auto;
+  font-weight: bold;
+}
+
+.tabla{
+  margin: 0 auto;
+  padding: 10px;
+  width: 95%;
+  background: var(--events-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla-medidas-celdas{
+  font: var(--font-weight-p2);
+  width: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#Peso{
+  font: var(--font-weight-p2);
+}
+
+#Estatura{
+  font: var(--font-weight-p2);
+}
+
+.calcula-medidas{
+  background-color: transparent;
+  font: var(--font-botones);
+  border: none;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 15px;
+  width: 130px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--button-color2);
+  text-decoration: none;
+  }
+  
+  .calcula-medidas:hover,
+  .calcula-medidas:focus {
+    outline     : none;
+    background  : var(--text-color);
+    color       : var(--events-color);
+  }
+
+  .parrafos{
+    padding: 10px;
+    margin: 0 auto;
+    width: 95%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Resultado{
+    background-color: transparent;
+    color: red;
+    font: var(--font-botones);
+    line-height: normal;
+    text-align: center;
+    width: 400px;
+  }
+
+  #Explicacion{
+    background-color: transparent;
+    color: red;
+    font: var(--font-botones);
+    line-height: normal;
+    text-align: center;
+    width: 400px;
+  }
+
+
+
+
+
+
+/* Bloque metabolismo basal */
+
+  #metabolismo-basal{
+    width: 100%;
+    display: flex;
+    background-color: var(--events-color);
+    margin: 0 auto;
+    padding: 20px;
+    font-weight: bold;
+  }
+  
+  .metabolismo-container-all{
+    font: var(--font-weight-p);
+    line-height: normal;
+    margin: 0 auto;
+    padding: 20px;
+    width: 95%;
+    height: 780px;
+    background: var(--button-color);
+    font-weight: bold;
+  }
+  
+  .metabolismo-container-all h6{
+    font: var(--font-weight-p);
+    line-height: normal;
+    margin: 0 auto;
+    padding: 20px;
+    width: 95%;
+    height: auto;
+    background: var(--button-color2);
+    box-shadow: 0px 4px 8px var(--events-color);
+    color: var(--events-color);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .metabolismo-container-all p{
+    font: var(--font-weight-p);
+    line-height: normal;
+    margin: 0 auto;
+    padding: 20px;
+    width: 95%;
+    height: auto;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .metabolismo-tabla{
+    float: left;
+    padding: 20px;
+    width: 20%;
+    background: var(--events-color);
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+  }
+
+  .tabla-metabolismo-celdas{
+    font: var(--font-weight-p2);
+    width: 260px;
+    margin-bottom: 10px;
+  }
+  
+  #Sexo{
+    font: var(--font-weight-p2);
+    width: 200px;
+  }
+
+  #Edad{
+    font: var(--font-weight-p2);
+    width: 200px;
+  }
+  
+  #Peso1{
+    font: var(--font-weight-p2);
+    width: 200px;
+  }
+
+  #Estatura1{
+    font: var(--font-weight-p2);
+    width: 200px;
+  }
+  
+  .calcula-metabolismo{
+    background-color: transparent;
+    font: var(--font-botones);
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 15px;
+    width: 130px;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px var(--button-color2);
+    text-decoration: none;
+    }
+    
+    .calcula-metabolismo:hover,
+    .calcula-metabolismo:focus {
+      outline     : none;
+      background  : var(--text-color);
+      color       : var(--events-color);
+    }
+  
+    .parrafos1{
+      float: right;
+      margin-right: 50px;
+      padding: 20px;
+      width: 65%;
+      height: auto;
+      font-weight: bold;
+      justify-content: center;
+    }
+  
+    #Resultado1{
+      background-color: transparent;
+      color: red;
+      font: var(--font-botones);
+      line-height: normal;
+      text-align: center;
+      width: 100%;
+    }
+  
+    #Explicacion1{
+      background-color: transparent;
+      color: red;
+      font: var(--font-botones);
+      line-height: normal;
+      text-align: center;
+      width: 100%;
+    }
+
+
+
+
+
+
+
+/* Bloque de formulario */
+
+.seccion-formulario{
+  width: 100%;
+  background-color: var(--button-color);
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.foto img{
+  float: left;
+  width: 500px;
+  object-fit: cover;
+}
+
+.empieza_el_cambio{
+  margin: 0 auto;
+  padding: 20px;
+  width: 95%;
+  height: 660px;
+  background: var(--events-color);
+  font-weight: bold;
+  display: flex;
+}
+
+.bloque-formulario{
+  margin : 20px auto;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.bloque-formulario article{
+  text-align: center;
+  margin-bottom: 25px;
+  display: inline-block;
+  font: normal normal normal 26px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  color: var(--button-color);
+}
+
+.formulario{
+  align-self: center;
+  position : absolute;
+  right: 350px;
+  margin : 30px auto;
+  box-sizing: border-box;
+  display  : grid;
+  grid-gap : 20px;
+}
+
+.formulario .celdas{
+  width: 320px;
+  color: var(--button-color);
+  border: 2px solid var(--button-color2);
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  font: var(--font-weight-p2);
+  width: 300px;
+}
+
+.formulario .celdas:active {
+  box-shadow: 2px 2px 15px var(--button-color) inset;
+}
+
+
+.formulario textarea{
+  font: var(--font-weight-p2);
+  width: 320px;
+  height: 120px;
+  color: var(--button-color);
+  border: 2px solid var(--button-color2);
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+}
+
+.formulario textarea:active {
+  box-shadow: 2px 2px 15px var(--button-color) inset;
+}
+
+.formulario .boton{
+  padding: 5px;
+  width: 300px;
+  font: bold .6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  background-color: var(--button-color);
+  font: normal normal normal 20px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  outline: 1.5px solid rgb(79, 187, 52);
+  outline-offset: .3rem;
+}
+
+.formulario .boton:hover,
+.formulario .boton:focus {
+  outline     : none;
+  background  : var(--text-color);
+  color       : var(--events-color);
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+/* Bloque del footer */
+
+footer{
+  background-color: var(--events-color);
+  font: var(--font-weight-p2);
+  width: 100%;
+  margin-top: 3px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left{
+  justify-self: flex-start;
+  margin-left: 80px;
+}
+
+.right{
+  justify-self: flex-end;
+  margin-right: 80px;
+}
+
+.right img{
+  width: 50px;
+  list-style: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.right img:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+/* Diseño responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 650px){
+
+  :root{
+    --text-color: #fff;
+    --text-color2: #000000;
+    --background-color: #0d0d0d;
+    --events-color: #151615;
+    --button-color: #94E90A;
+    --button-color2: #00e600;
+    --font-weight-p: normal normal normal 16px/3.6rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p2: normal normal normal 12px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p3: normal normal normal 18px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p4: normal normal normal 22px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones: normal normal normal 20px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones-inicio: normal normal normal 14px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones-inicio-reducidos: normal normal normal 8px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  }
+
+  body{
+    font-size: 1.2rem;
+  }
+  
+  /* Barra de navegación */
+
+  .nav{
+   flex-direction: column;
+   width: 100%;
+  }
+  
+
+
+  
+  
+  /* botones */
+
+  .nav-menu{
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu-item{
+    margin-right: 0;
+  }
+
+  .nav-menu-link{
+    margin-right: 0;
+  }
+
+  .nav-menu-item-redes{
+    margin-right: 0;
+  }
+
+  .nav-menu-link-redes{
+    padding: 8px;
+  }
+
+  .carmentraining{
+    margin-top: 100px;
+  }
+
+  .carmentraining h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font: normal normal normal 40px/8.2rem oswald-medium,oswald,sans-serif;
+  }
+
+  .quien-soy{
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    font-weight: bold;
+    background-color: var(--button-color);
+  }
+  
+  .quien-soy picture{
+    flex-direction: column;
+  }
+
+  .quien-soy img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .quien-soy figcaption{
+    margin: 0 auto;
+  }
+
+  .que-hago{
+    padding: 20px;
+  }
+  
+  .descripcion-titulo p:nth-child(1){
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .descripcion-titulo p:nth-child(2){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(1){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(2){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(3){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .que-hago img{
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    float: right;
+    height: auto;
+    margin-right: 0;
+    object-fit: cover;
+  }
+
+  .preguntas figcaption p:nth-child(1){
+    margin-top: -250px;
+  }
+  
+  .preguntas p:nth-child(2){
+    margin-top: -140px;
+  }
+
+  .preguntas_frecuentes{
+    margin-top: 350px;
+  }
+
+  .preguntas_frecuentes img{
+    display: none;
+  }
+
+  .respuestas{
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .container-all{
+    height: auto;
+  }
+
+  .tabla{
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .tabla-medidas-celdas{
+    width: 200px;
+  }
+
+  #Peso{
+    width: 100%;
+  }
+  
+  #Estatura{
+    width: 100%;
+  }
+
+  .calcula-medidas{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .metabolismo-container-all{
+    height: auto;
+  }
+
+  .metabolismo-tabla{
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .tabla-metabolismo-celdas{
+    width: 200px;
+  }
+
+  .calcula-metabolismo{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .parrafos1{
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .seccion-formulario{
+    height: auto;
+  }
+
+  .foto img{
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .empieza_el_cambio{
+    width: 100%;
+    padding: 0;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .bloque-formulario{
+    margin : 0 auto;
+  }
+  
+  .bloque-formulario{
+    margin : 0 auto;
+  }
+  
+  .bloque-formulario article{
+    margin-bottom: 20px;
+  }
+  
+  .formulario{
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin : 0 auto;
+    grid-gap : 10px;
+    position: static;
+  }
+  
+  .formulario .boton{
+  padding: 5px;
+  margin-bottom: 10px;
+  }
+
+  footer{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  
+  .left{
+    grid-row: 1;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    justify-self: center;
+  }
+  
+  .right{
+    grid-row: 2;
+    margin-left: 0;
+    justify-self: center;
+    margin: 0 auto;
+  }
+  
+  .right img{
+    width: 30px;
+  }
+
+}
+
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 950px){
+
+  :root{
+    --text-color: #fff;
+    --text-color2: #000000;
+    --background-color: #0d0d0d;
+    --events-color: #151615;
+    --button-color: #94E90A;
+    --button-color2: #00e600;
+    --font-weight-p: normal normal normal 16px/3.6rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p2: normal normal normal 12px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p3: normal normal normal 18px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-weight-p4: normal normal normal 22px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones: normal normal normal 20px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones-inicio: normal normal normal 14px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    --font-botones-inicio-reducidos: normal normal normal 8px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  }
+
+  body{
+    font-size: 1.2rem;
+  }
+  
+  /* Barra de navegación */
+
+  .nav{
+   flex-direction: column;
+   width: 100%;
+  }
+  
+
+
+  
+  
+  /* botones */
+
+  .nav-menu{
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu-item{
+    margin-right: 0;
+  }
+
+  .nav-menu-link{
+    margin-right: 0;
+  }
+
+  .nav-menu-item-redes{
+    margin-right: 0;
+  }
+
+  .nav-menu-link-redes{
+    padding: 15px;
+  }
+
+  .carmentraining{
+    margin-top: 100px;
+  }
+
+  .carmentraining h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font: normal normal normal 80px/8.2rem oswald-medium,oswald,sans-serif;
+  }
+
+  .quien-soy{
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    font-weight: bold;
+    background-color: var(--button-color);
+  }
+  
+  .quien-soy picture{
+    flex-direction: column;
+  }
+
+  .quien-soy img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .que-hago{
+    padding: 20px;
+  }
+  
+  .descripcion-titulo p:nth-child(1){
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .descripcion-titulo p:nth-child(2){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(1){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(2){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .descripcion p:nth-child(3){
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .que-hago img{
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    float: right;
+    height: auto;
+    margin-right: 0;
+    object-fit: cover;
+  }
+
+  .preguntas figcaption p:nth-child(1){
+    margin-top: -250px;
+  }
+  
+  .preguntas p:nth-child(2){
+    margin-top: -140px;
+  }
+
+  .preguntas_frecuentes{
+    margin-top: 350px;
+  }
+
+  .preguntas_frecuentes img{
+    display: none;
+  }
+
+  .respuestas{
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .container-all{
+    height: auto;
+  }
+
+  .tabla{
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .tabla-medidas-celdas{
+    width: 200px;
+  }
+
+  #Peso{
+    width: 100%;
+  }
+  
+  #Estatura{
+    width: 100%;
+  }
+
+  .calcula-medidas{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .metabolismo-container-all{
+    height: auto;
+  }
+
+  .metabolismo-tabla{
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .tabla-metabolismo-celdas{
+    width: 200px;
+  }
+
+  .calcula-metabolismo{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .parrafos1{
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .seccion-formulario{
+    height: auto;
+  }
+
+  .foto img{
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .empieza_el_cambio{
+    width: 100%;
+    padding: 0;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .bloque-formulario{
+    margin : 0 auto;
+  }
+  
+  .bloque-formulario{
+    margin : 0 auto;
+  }
+  
+  .bloque-formulario article{
+    margin-bottom: 20px;
+  }
+  
+  .formulario{
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin : 0 auto;
+    grid-gap : 10px;
+    position: static;
+  }
+  
+  .formulario .boton{
+  padding: 5px;
+  margin-bottom: 10px;
+  }
+
+  footer{
+    flex-direction: column;
+  }
+  
+  .left{
+    margin-left: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .right{
+    margin-left: 0;
+  }
+  
+  .right img{
+    width: 30px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 500px){
+
+  .nav-menu{
+    margin-top: 30px;
+  }
+
+  .nav-menu-item{
+    background-repeat: no-repeat;
+    background-color: #12ed54;
+    background-image: linear-gradient(45deg, var(--button-color) 0%, var(--button-color2) 100%);
+    border: 2px solid var(--background-color);
+    margin-right: 10px;
+  }
+
+  .nav-menu-item:hover{
+    background-color: var(--button-color2);
+  }
+
+  .nav-menu-link{
+    padding: 10px;
+  }
+
+  .nav-menu-link img{
+    display: flex;
+    width: 25px;
+    height: auto;
+  }
+
+  .nav-menu-link span{
+    display: none;
+  }
+
+
+  .nav-menu-item-redes{
+    background-repeat: no-repeat;
+    background-color: #12ed54;
+    background-image: linear-gradient(45deg, var(--button-color) 0%, var(--button-color2) 100%);
+    border: 2px solid var(--background-color);
+    margin-right: 10px;
+  }
+
+  .nav-menu-link-redes{
+    padding: 10px;
+  }
+
+  .nav-menu-link-redes img{
+    display: flex;
+    width: 25px;
+    height: auto;
+  }
+
+  .nav-menu-link-redes span{
+    display: none;
+  }
+}
